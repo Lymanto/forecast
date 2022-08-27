@@ -8,7 +8,6 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import {DayForecastList, HourForecastList, Header, Gap} from './components';
-import RNLocation from 'react-native-location';
 
 const App = () => {
   const [currentWeather, setCurrentWeather] = useState(null);

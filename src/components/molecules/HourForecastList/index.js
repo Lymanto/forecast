@@ -42,10 +42,11 @@ const HourForecastList = ({data}) => {
       <FlatList
         horizontal
         showsHorizontalScrollIndicator={false}
-        data={getCurrentDayData(groupedData)}
+        data={(getCurrentDayData(groupedData), getCurrentDayData(groupedData))}
         renderItem={renderItem}
         keyExtractor={item => item.id}
-        style={styles.hourForecast}></FlatList>
+        style={styles.hourForecast}
+      />
     </View>
   );
 };

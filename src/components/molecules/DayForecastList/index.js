@@ -52,16 +52,16 @@ const DayForecastList = ({data}) => {
       </View>
       {Object.keys(groupedData)
         .slice(0, 4)
-        .map(data => {
+        .map(item => {
           return (
             <DayForecast
-              key={getDateMonth(data)}
-              weatherDesc={groupedData[data][0].weather[0].icon}
-              day={getDay(data)}
-              date={getDateMonth(data)}
+              key={item}
+              weatherDesc={groupedData[item][0].weather[0].icon}
+              day={getDay(item)}
+              date={getDateMonth(item)}
               degrees={`${Math.round(
-                getMax(groupedData[data], 'temp_max'),
-              )} / ${Math.round(getMin(groupedData[data], 'temp_min'))}`}
+                getMax(groupedData[item], 'temp_max'),
+              )} / ${Math.round(getMin(groupedData[item], 'temp_min'))}`}
             />
           );
         })}
